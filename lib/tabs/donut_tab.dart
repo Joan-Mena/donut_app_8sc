@@ -18,8 +18,9 @@ class DonutTab extends StatelessWidget {
     return GridView.builder(
       //como se va a distribuir
       //en crossAxistCount podemos asignar el numero de columnas que podemos tener he ir modificando.
-      gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2, childAspectRatio: 1 / 1.5),
       //que elementos tendra
       itemBuilder: (context, index) {
         return DonutTile(

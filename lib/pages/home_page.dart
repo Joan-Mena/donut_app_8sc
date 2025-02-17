@@ -6,7 +6,6 @@ import '../tabs/burger_tab.dart';
 import '../tabs/donut_tab.dart';
 import '../tabs/smoothie_tab.dart';
 import '../tabs/pancake_tab.dart';
-import '../tabs/pizza_tab.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -94,6 +93,7 @@ class _HomepageState extends State<Homepage> {
               BurgerTab(),
               SmoothieTab(),
               PancakeTab(),
+              PizzaTab()
               //PizzaTab();
             ])),
 
