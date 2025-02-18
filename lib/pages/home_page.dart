@@ -17,25 +17,15 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   List<Widget> myTabs = [
     //donut tab
-    const MyTab(
-      iconPath: 'lib/icons/donut.png',
-    ),
+    const MyTab(iconPath: 'lib/icons/donut.png', tabName: 'Donuts'),
     //burger
-    const MyTab(
-      iconPath: 'lib/icons/burger.png',
-    ),
+    const MyTab(iconPath: 'lib/icons/burger.png', tabName: 'Burger'),
     //smothie
-    const MyTab(
-      iconPath: 'lib/icons/smoothie.png',
-    ),
+    const MyTab(iconPath: 'lib/icons/smoothie.png', tabName: 'Smooothie'),
     //pancake
-    const MyTab(
-      iconPath: 'lib/icons/pancakes.png',
-    ),
+    const MyTab(iconPath: 'lib/icons/pancakes.png', tabName: 'PanCakes'),
     //pizza
-    const MyTab(
-      iconPath: 'lib/icons/pizza.png',
-    ),
+    const MyTab(iconPath: 'lib/icons/pizza.png', tabName: 'Pizza'),
   ];
   //donut tab
 
@@ -85,7 +75,11 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
             //Tab bar
-            TabBar(tabs: myTabs),
+            TabBar(
+              tabs: myTabs,
+              //color de texto seleccionado
+              labelColor: Colors.pink, unselectedLabelColor: Colors.grey,
+            ),
             //Tap bar view
             Expanded(
                 child: TabBarView(children: [
@@ -98,6 +92,43 @@ class _HomepageState extends State<Homepage> {
             ])),
 
             //Carrito
+            Container(
+              color: Colors.white,
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment
+                    .spaceBetween, //para separar mas las cosas, los elementos
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(left: 28),
+                    child: Column(
+                      //alineado a la izquierda
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "2 Items | \$45",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          'Delivery charges Includes',
+                          style: TextStyle(fontSize: 12),
+                        )
+                      ],
+                    ),
+                  ),
+                  ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.pink),
+                      child: const Text(
+                        "View Cart",
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ))
+                ],
+              ),
+            )
           ],
         ),
       ),

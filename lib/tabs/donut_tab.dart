@@ -20,7 +20,9 @@ class DonutTab extends StatelessWidget {
       //en crossAxistCount podemos asignar el numero de columnas que podemos tener he ir modificando.
 
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, childAspectRatio: 1 / 1.5),
+          crossAxisCount: 2,
+          childAspectRatio: 1 /
+              1.5), //Esta linea refiere a la proporcion de como se ve en pantalla
       //que elementos tendra
       itemBuilder: (context, index) {
         return DonutTile(
